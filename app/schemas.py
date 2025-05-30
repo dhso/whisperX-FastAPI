@@ -376,6 +376,7 @@ class SpeechToTextProcessingParams(BaseModel):
     alignment_params: AlignmentParams
     diarization_params: DiarizationParams
 
+
 class TaskType(str, Enum):
     """Enum for task types."""
 
@@ -385,10 +386,10 @@ class TaskType(str, Enum):
     combine_transcript_diarization = "combine_transcript&diarization"
     full_process = "full_process"
 
+
 class TaskStatus(str, Enum):
     """Enum for task status."""
 
     processing = "processing"
     completed = "completed"
     failed = "failed"
-

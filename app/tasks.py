@@ -132,7 +132,19 @@ def get_all_tasks_status_from_db(session: Session = Depends(get_db_session)):
     """
     tasks = []
     # Define the columns you want to select
-    columns = [Task.uuid, Task.status, Task.task_type, Task.language, Task.file_name, Task.error, Task.url, Task.duration, Task.audio_duration, Task.start_time, Task.end_time]
+    columns = [
+        Task.uuid,
+        Task.status,
+        Task.task_type,
+        Task.language,
+        Task.file_name,
+        Task.error,
+        Task.url,
+        Task.duration,
+        Task.audio_duration,
+        Task.start_time,
+        Task.end_time,
+    ]
 
     # Create a query to select only the specified columns
     query = session.query(*columns)
